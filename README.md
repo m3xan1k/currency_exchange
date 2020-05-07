@@ -2,10 +2,15 @@
 
 Build on RubyOnRails, PostgreSQL
 
+```
+Demo(not updated often, need paid account to connect heroku scheduler to run db update task):
+```
+https://infinite-hamlet-18303.herokuapp.com/
+
 #### Job to update database and refresh currency rates
 
 ```
-currency_exchange/app/jobs/update_db_job.rb
+rake update_db
 ```
 
 API supports two methods
