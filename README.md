@@ -2,6 +2,12 @@
 
 Build on RubyOnRails, PostgreSQL
 
+#### Job to update database and refresh currency rates
+
+```
+currency_exchange/app/jobs/update_db_job.rb
+```
+
 API supports two methods
 
 ### GET /currencies
