@@ -17,6 +17,11 @@ require "action_cable/engine"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+Dotenv::Railtie.load
+
+POSTGRES_USER = ENV["POSTGRES_USER"]
+POSTGRES_PASSWORD = ENV["POSTGRES_PASSWORD"]
+
 module CurrencyExchange
   class Application < Rails::Application
     config.active_job.queue_adapter = :sucker_punch

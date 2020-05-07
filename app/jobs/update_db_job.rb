@@ -15,7 +15,7 @@ class UpdateDbJob
     valutes.each do |valute|
       valute_data = {}
 
-      value = valute.css('Value').text.to_f
+      value = valute.css('Value').text.sub(',', '.').to_f
       nominal = valute.css('Nominal').text.to_i
       rate = (value / nominal).round(2)
 
@@ -28,7 +28,7 @@ class UpdateDbJob
   end
 
   def fill_database(data)
-    Currency.import data, on_duplicate_key_update: {conflict_target: [:name], columns: [:rate] }
+    Currency.import data, on_duplicate_key_update: {conflict_target: [:name], columns: [:rate]}
   end
 
   def perform
