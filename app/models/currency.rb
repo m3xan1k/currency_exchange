@@ -1,4 +1,4 @@
 class Currency < ApplicationRecord
-  validate :name, presence: true
-  validate :rate, presence: true
+  validates :name, presence: true
+  validates :rate, presence: true
 end
