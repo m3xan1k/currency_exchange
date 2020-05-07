@@ -33,6 +33,8 @@ GEM
       activemodel (= 5.2.4.2)
       activesupport (= 5.2.4.2)
       arel (>= 9.0)
+    activerecord-import (1.0.4)
+      activerecord (>= 3.2)
     activestorage (5.2.4.2)
       actionpack (= 5.2.4.2)
       activerecord (= 5.2.4.2)
@@ -120,6 +122,8 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     sqlite3 (1.4.2)
+    sucker_punch (2.1.2)
+      concurrent-ruby (~> 1.0)
     thor (1.0.1)
     thread_safe (0.3.6)
     tzinfo (1.2.7)
@@ -132,14 +136,17 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activerecord-import
   bootsnap (>= 1.1.0)
   byebug
   listen (>= 3.0.5, < 3.2)
+  nokogiri
   puma (~> 3.11)
   rails (~> 5.2.4, >= 5.2.4.2)
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3
+  sucker_punch
   tzinfo-data
 
 RUBY VERSION
